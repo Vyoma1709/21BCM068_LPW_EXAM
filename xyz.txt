@@ -1,0 +1,28 @@
+#input string
+#count even letter words & odd letter words
+#total=even+odd
+
+print "Enter a String:";
+my $string=<STDIN>;
+# print"$string";
+
+@str=(split' ',$string);
+# print"@str\n";
+
+@total=(split'',@str);
+print"Total number of words:@total\n";
+
+$odd=0;
+$even=0;
+foreach my $i(@str){
+    if(length($i)%2==0){
+        $even=$even+1;
+    }
+    else{
+        $odd=$odd+1;
+    }
+}
+
+print"No. of even letter words:$even\n";
+print"No. of odd letter words:$odd";
+
